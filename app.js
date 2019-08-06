@@ -1,9 +1,9 @@
-const http = new EasyHTTP();
+const http = new EasyHTTP;
 
 
 //get users. json placeholder
 // http.get("http://jsonplaceholder.typicode.com/users")
-//         .then(data => console.log(data)) //getdata
+//         .then(resData => console.log(resData)) //getdata
 //         .catch(error => console.log(error)); //display an arry with 10 users
 
 
@@ -23,11 +23,11 @@ const data = {
 
 //update users
 
-// http.put("http://jsonplaceholder.typicode.com/users/2", data)
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error));
+http.put("http://jsonplaceholder.typicode.com/users/2", data)
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
 
 //Delete users
-http.delete("http://jsonplaceholder.typicode.com/users/6")
-    .then(data => console.log(data)) // displays resource deleted
-    .catch(error => console.log(error)); //
+// http.delete("http://jsonplaceholder.typicode.com/users/6")
+//     .then(data => console.log(data)) // displays resource deleted
+//     .catch(error => console.log(error)); //
